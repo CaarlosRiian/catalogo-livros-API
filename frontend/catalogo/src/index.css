@@ -11,8 +11,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  max-width: 800px; /* Ajuste o valor conforme necessário */
-  margin: 0 auto; /* Centraliza o contêiner na tela */
+  max-width: 800px; 
+  margin: 0 auto; 
 }
 
 h1 {
@@ -23,7 +23,7 @@ h1 {
 ul {
   list-style: none;
   padding: 0;
-  width: 100%; /* Ocupa 100% da largura do contêiner pai */
+  width: 100%; 
 }
 
 li {
@@ -93,7 +93,7 @@ button {
 }
 
 .header-row > div {
-  width: calc(33.33% - 10px); /* Ajuste conforme necessário, considerando o padding */
+  width: calc(33.33% - 10px); 
 }
 
 .lista-livros {
@@ -113,7 +113,7 @@ button {
 }
 
 .header-row > div {
-  width: calc(33.33% - 10px); /* Ajuste conforme necessário, considerando o padding */
+  width: calc(33.33% - 10px); 
 }
 
 .lista-livros {
@@ -135,7 +135,7 @@ button {
 
 .header-row > div,
 .lista-livros li > div {
-  width: calc(25% - 10px); /* Ajuste conforme necessário, considerando o padding */
+  width: calc(25% - 10px); 
 }
 
 .botao-editar,

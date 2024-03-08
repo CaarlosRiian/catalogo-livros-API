@@ -13,7 +13,6 @@ class LivroSerializer(serializers.ModelSerializer):
         model = Livro
         fields = ['id', 'titulo', 'autor', 'ano_publicado']
 
-    # Representar nome do autor na API
     def to_representation(self, instance):
         representation = super().to_representation(instance)
         representation['autor'] = instance.autor.nome
