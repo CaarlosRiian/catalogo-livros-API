@@ -7,6 +7,15 @@ class AutorSerializer(serializers.ModelSerializer):
         fields = ['id', 'nome']
 
 class LivroSerializer(serializers.ModelSerializer):
+
+    autor = serializers.PrimaryKeyRelatedField(queryset=Autor.objects.all())
     class Meta:
         model = Livro
         fields = ['id', 'titulo', 'autor', 'ano_publicado']
+
+    # Representar nome do autor na API
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation['autor'] = instance.autor.nome
+
+        return representation

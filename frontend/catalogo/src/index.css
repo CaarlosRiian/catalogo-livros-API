@@ -1,13 +1,261 @@
 body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #f2f2f2;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  max-width: 800px; /* Ajuste o valor conforme necessário */
+  margin: 0 auto; /* Centraliza o contêiner na tela */
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 100%; /* Ocupa 100% da largura do contêiner pai */
+}
+
+li {
+  background-color: #fff;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.botao-editar,
+button {
+  padding: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.botao-editar {
+  background-color: #4CAF50;
+}
+
+.botao-editar:hover,
+button:hover {
+  background-color: #0c380e;
+}
+
+.botao-deletar, button {
+  padding: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+} 
+
+.botao-deletar {
+  background-color: #ef0d0d;
+}
+
+.botao-deletar:hover,
+button:hover {
+  background-color: #d70000;
+}
+
+button {
+  background-color: #f44336;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.header-row > div {
+  width: calc(33.33% - 10px); /* Ajuste conforme necessário, considerando o padding */
+}
+
+.lista-livros {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.header-row > div {
+  width: calc(33.33% - 10px); /* Ajuste conforme necessário, considerando o padding */
+}
+
+.lista-livros {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.header-row,
+.lista-livros li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.header-row > div,
+.lista-livros li > div {
+  width: calc(25% - 10px); /* Ajuste conforme necessário, considerando o padding */
+}
+
+.botao-editar,
+button {
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.botao-editar {
+  background-color: #4CAF50;
+}
+
+.botao-editar:hover,
+button:hover {
+  background-color: #45a049;
+}
+
+button {
+  background-color: #f44336;
+}
+
+/* CRIAR */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 60px
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.criar-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button.criar-buttom {
+  margin-left: 50px;
+}
+
+/* EDITAR */
+
+.botao-editar-2 {
+  color: white;
+  margin-left: -0.1px;
+  margin-right: 100px;
+  background-color: #45a049;
+}
+
+.botao-editar-2:hover {
+  background-color: #2a712e;
+}
+
+/* Botoes Voltar */
+
+.botao-voltar-edit {
+  background-color: green;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.botao-voltar-criar {
+  background-color: green;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.botao-criar {
+  background-color: green;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
 }
